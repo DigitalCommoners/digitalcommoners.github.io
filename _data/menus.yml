@@ -1,0 +1,11 @@
+headernav:
+- name: About
+  href: \#about
+- name: Events
+  href: \#events
+- name: Blog
+  href: /blog/
+- name: Contact
+  href: \#contact
+  
+  

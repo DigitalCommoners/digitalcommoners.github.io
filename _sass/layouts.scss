@@ -1,0 +1,47 @@
+/*     POST     */
+body.post {
+    main {
+        article {
+            margin: 32px 32px 40px;
+            h1 {
+                color: $pink;
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+            h3 {
+                color: $green;
+                font-size: 14px;
+                font-weight: 400;
+                margin-bottom: 24px;
+            }
+            div.inner {
+                margin: 0px auto 0px 0px;
+                max-width: 660px;
+            }
+        }
+    }
+    @media only screen and (min-width: $tablet) {
+        main {
+            article {
+                margin: 80px 80px 160px;
+                h1 {
+                    @include flexfont(28px,60px,$tablet,$desktop);
+                    margin-bottom: 32px;
+                }
+                h3 {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: $desktop) {
+        main {
+            article {
+                h1 {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}

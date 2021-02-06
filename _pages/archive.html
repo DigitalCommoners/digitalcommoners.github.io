@@ -1,0 +1,14 @@
+---
+layout: page
+permalink: /blog/
+title: The Digital Commoners Blog
+description: The Digital Commoner Blog
+image: /assets/images/featured/blog-featured.png
+hero-title: Blog
+hero-image: /assets/images/hero/blog.png
+hero-classes: seven00
+---
+
+{%- for post in site.posts -%}
+<a href="{{post.url}}">{{post.title}}</a>
+{%- endfor -%}

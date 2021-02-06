@@ -1,0 +1,28 @@
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+/*     COLORS       */
+$pink:          #da1585;
+$green:         #1fa884;
+$purple:        #7a2f99;
+$yellow:        #ff9900;
+$black:         #000000;
+$darkgrey:      #555555;
+$mediumgrey:    #777777;
+$lightgrey:     #999999;
+$notwhite:      #ededed;
+$white:         #ffffff;
+
+/*      FONTS       */
+$copyfont: 'AktivGrotesk',helvetica,arial,sans-serif;
+$headfont: 'Axia',helvetica,arial,sans-serif;
+
+/*    BREAKPOINTS    */
+$tablet:    800px;
+$desktop:   1600px;
+
+/*    FLEX FONTS    */
+@mixin flexfont($minsize,$maxsize,$minvw,$maxvw) {
+    font-size: calc(#{$minsize} + #{strip-unit($maxsize - $minsize)} * ((100vw - #{$minvw}) / #{strip-unit($maxvw - $minvw)}));
+}

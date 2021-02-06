@@ -1,0 +1,26 @@
+
+<nav id="header-nav" class="nav">
+  <ul id="unmobile-menu" class="site-nav">
+    {% for nav in site.data.menus.headernav %}
+    <li{% if nav.data-nav %} data-nav="#{{nav.data-nav}}"{% endif %}>
+      {%- if nav.href -%}
+      <a class="text-link" href="{{ nav.href }}">{{- nav.name -}}</a>
+      {%- else -%}
+      {{- nav.name -}}
+      {%- endif -%}
+      </li>
+    {% endfor %}
+  </ul>
+  <ul id="mobile-menu" class="mobile-nav">
+    <img src="/assets/images/logo/dc_logo-pinkdot_submark.svg" />
+    {% for nav in site.data.menus.headernav %}
+    <li{% if nav.data-nav %} data-nav="#{{nav.data-nav}}"{% endif %}>
+      {%- if nav.href -%}
+      <a href="{{ nav.href }}">{{- nav.name -}}</a>
+      {%- else -%}
+      {{- nav.name -}}
+      {%- endif -%}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -1,0 +1,47 @@
+<footer id="site-footer">
+    <div class="inner">
+    </div>
+    <div id="subfooter">
+        {% include social-nav.html %}
+        <div id="footer-text-block">
+            <img src="/assets/images/logo/dc_logo-white_wide.svg" />
+            <span>&copy;{{- 'now' | date: "%Y" -}} Digital Commoners. All Rights Reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    jQuery(function($){
+        $(function(){
+            $(window).on('load, scroll', function(){
+                var scroll = $(window).scrollTop();
+                if (scroll >= 24) {
+                    $('#site-header').addClass('persist');
+                } else {
+                    $('#site-header').removeClass('persist');
+                }
+            })
+            // enable smooth scrolling, (thanks chris coyier(!) @ css-tricks.com)
+            $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - 90
+                        }, 500);
+                        return false;
+                    }
+                }
+            })
+            // enable smooth scrolling from somewhere else
+            if ( window.location.hash ) scroll(0,0);
+            setTimeout( function() { scroll(0,0); }, 1);
+            if(window.location.hash) {
+                $('html, body').animate({
+                    scrollTop: $(window.location.hash).offset().top - 90
+                }, 500);
+            }
+        })
+    })
+</script>

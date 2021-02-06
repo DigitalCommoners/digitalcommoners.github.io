@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body class="post {{page.hero-classes}}">
+    {% include header.html %}
+    <main  role="main" class="{{page.hero-classes}}">
+        {% include hero.html %}
+      <article>
+        <h3 class="headline-left mini">
+          Blog
+          <span></span>
+        </h3>
+        <h1 class="title-post">{{page.title}}</h1>
+        {%- if page.authors -%}
+          {%- assign author_array = "" | split: ", " -%}
+          {%- for page-author in page.authors -%}
+          {%- for site-author in site.data.people.authors -%}
+          {%- if site-author.id == page-author -%}
+          {%- capture author -%}<a href="{{site-author.url}}">{{site-author.name}}</a>{%- endcapture -%}
+          {%- assign author_array = author_array | push: author -%}
+          {%- endif -%}
+          {%- endfor -%}
+          {%- endfor -%}
+          <h3 class="author-post copyfont">{{author_array | array_to_sentence_string: "and"}} | {{page.date | date: "%B %d, %Y"}}</h3>
+        {%- endif -%}
+        <div class="inner">
+          {{content}}
+        </div>
+        {%- if page.register-text -%}
+        <button onclick="location.href='{{page.register-link}}" type="button">{{page.register-text}}</button>
+        {%- endif -%}
+      </article>
+      
+    </main>
+  </body>
+  {% include footer.html %}
+</html>
