@@ -29,8 +29,8 @@
           {%- endfor -%}
           {%- endfor -%}
           <h3 class="meta-post copyfont">{{author_array | array_to_sentence_string: "and"}} | {{page.date | date: "%B %d, %Y"}}</h3>
-        {%- elsif page.event-date -%}
-        <h3 class="meta-post copyfont">{{page.event-date | date: "%B %d, %Y"}}</h3>
+        {%- elsif page.register-text -%}
+        <h3 class="meta-post copyfont">{{page.date | date: "%B %d, %Y"}}</h3>
         {%- endif -%}
         <div class="inner">
           {{content}}
