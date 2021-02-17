@@ -1,0 +1,40 @@
+<section id="events">
+    {%- assign next-three = next-three | split: ', ' -%}
+    {%- assign events = site.events | sort_by: date -%}
+    {%- capture now -%}{{ 'now' | date: '%s' }}{%- endcapture -%}
+    {%- for event in events -%}
+    {%- capture then -%}{{ event.date | date: '%s' }}{%- endcapture -%}
+    {%- if then >= now -%}
+        {%- assign next-three = next-three | push: event -%}
+    {%- endif -%}
+    {%- endfor -%}
+    <div class="inner">
+        <div class="headline-text">
+            <h2 class="headline-center">
+                Events
+                <span></span>
+            </h2>
+        </div>
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <div class="js-flickity {{include.classes}}" data-flickity-options='{ "wrapAround": true, "draggable": true,"watchCSS": true, "prevNextButtons": false }'>
+            {%- for next-event in next-three | limit: 3 -%}
+                {%- assign eventdate = next-event.date | date: "%B %d, %Y" -%}
+                {%- include components/archive-card.html type="event-post" title=next-event.title image=next-event.image date=eventdate excerpt=next-event.excerpt url=next-event.url -%}
+            {%- endfor -%}
+        </div>
+            <span class="color-block"></span>
+    </div>
+</section>
+<script>
+  jQuery(function($){
+    $(function(){
+      $(".archive-item .post-excerpt").each(function() {
+        if ($(this).text().length > 224) {
+          $(this).text($(this).text().substring(0,224)).append("...");
+        }
+      });
+    })
+  })
+
+</script>

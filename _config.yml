@@ -26,6 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.digitalcommoners.org/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+future: true
 
 # Build settings
 theme: minima
@@ -68,4 +69,4 @@ collections:
     permalink: /:categories/:year/:month/:title/
   events:
     output: true
-    permalink: /:categories/:year/:month/:title/
+    permalink: /:year/:month/:title/

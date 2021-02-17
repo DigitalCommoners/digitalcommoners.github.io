@@ -182,7 +182,7 @@ $color_hover_text:	$green;
 }
 
 // sticky nav
-.persist .dc_mobile_icon-bar { background-color: white; }
+.persist .dc_mobile_icon-bar { background-color: $pink; }
 
 @media only screen and (min-width:$tablet){
 	.dc_mobile_menu {

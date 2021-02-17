@@ -1,7 +1,7 @@
 /*     POST     */
 body.post {
     main {
-        article {
+        .page-content {
             margin: 32px 32px 40px;
             h1 {
                 color: $pink;
@@ -22,7 +22,7 @@ body.post {
     }
     @media only screen and (min-width: $tablet) {
         main {
-            article {
+            .page-content {
                 margin: 80px 80px 160px;
                 h1 {
                     @include flexfont(28px,60px,$tablet,$desktop);
@@ -37,11 +37,24 @@ body.post {
     }
     @media only screen and (min-width: $desktop) {
         main {
-            article {
+            .page-content {
                 h1 {
                     font-size: 60px;
                 }
             }
+        }
+    }
+}
+body.archive {
+    background-color: $notwhite;
+    main {
+        .page-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 80px 10px 160px; 
         }
     }
 }

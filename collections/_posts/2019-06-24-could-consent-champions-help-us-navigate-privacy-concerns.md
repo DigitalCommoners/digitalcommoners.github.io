@@ -5,7 +5,7 @@ title: >-
 date: 2019-06-24 14:33:22 +0100
 description: >-
   
-image: /assets/images/featured/consent-champion-featured.jpg
+image: /assets/images/featured/consent-champion-featured.png
 hero-image: /assets/images/hero/consent-champion.jpg
 hero-classes: seven00
 authors:

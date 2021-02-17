@@ -1,15 +1,27 @@
 <!doctype html>
 <html>
   {% include head.html %}
-  <body class="{{page.hero-classes}}">
+  <body class="archive {{page.hero-classes}}">
     {% include header.html %}
     <main  role="main" class="{{page.hero-classes}}">
       {% include hero.html %}
-      <article>
+      <article class="page-content">
         {{content}}
       </article>
       
     </main>
   </body>
   {% include footer.html %}
+  <script>
+    jQuery(function($){
+      $(function(){
+        $(".archive-item .post-excerpt").each(function() {
+          if ($(this).text().length > 200) {
+            $(this).text($(this).text().substring(0,224)).append("...");
+          }
+        });
+      })
+    })
+
+  </script>
 </html>

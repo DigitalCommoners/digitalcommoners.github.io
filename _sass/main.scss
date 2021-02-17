@@ -119,9 +119,37 @@ h4 {
         font-size: 86px;
     }
 }
+.headline-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    span {
+        display: block;
+        background: $pink;
+        margin: 20px auto 24px;
+        height: 5px;
+        width: 50px;
+    }
+    @media only screen and (min-width: $tablet) {
+        @include flexfont(40px,86px,$tablet,$desktop);
+        span {
+            margin: 20px auto 40px auto;
+            height: 15px;
+            width: 127px;
+        }
+    }
+    @media only screen and (min-width: $desktop) {
+        font-size: 86px;
+    }
+}
 p {
     font-weight: 300;
     margin-bottom: 24px;
+    line-height: 1.5em;
 }
 ul {
     list-style: disc;
@@ -149,6 +177,9 @@ img {
     text-align: center;
     margin: 0 auto;
     width: auto;
+}
+.unwidow {
+    display: inline-block;
 }
 .mobile-only { 
     @media only screen and (min-width: $tablet) {
@@ -182,6 +213,15 @@ h1,h2,h3,h4,h5,h6,p,span,a {
 .headfont {
     font-family: $headfont;
 }
+.bold-text {
+    font-weight: 700;
+}
+.pink-text {
+    color: $pink;
+}
+.green-text {
+    color: $green;
+}
 .triangle {
     position: absolute;
     height: 138px;
@@ -201,7 +241,7 @@ h1,h2,h3,h4,h5,h6,p,span,a {
     bottom: 0;
 }
 .has-triangle {
-    p {
+    .triangle-text {
         position: relative;
         text-shadow: 0px 0px 2px $white;
         z-index: 1;
@@ -214,62 +254,6 @@ h1,h2,h3,h4,h5,h6,p,span,a {
     @media only screen and (min-width: $tablet) {
         padding: 0px 40px 0px 0px;
         margin: 0px auto 0px 0px;
-    }
-}
-.color-block-container {
-    position: relative;
-    display: flex;
-    margin-bottom: 60px;
-    width: 100%;
-    img {
-        position: relative;
-        width: 94.7%;
-        z-index: 1;
-    }
-    .color-block {
-        position: absolute;
-        display: block;
-        bottom: -8%;
-        height: 97%;
-        width: 51%;
-        z-index: 0;
-    }
-    &.purple .color-block { background: $purple; }
-    &.green .color-block { background: $green; }
-    &.left {
-        img { margin: 0px 0px 0px auto; }
-        .color-block { left: 0; }
-    }
-    &.right {
-        img { margin: 0px auto 0px 0px; }
-        .color-block { right: 0; }
-    }
-    @media only screen and (min-width: $tablet) {
-        flex-basis: 50.8%;
-    }
-}
-.hero-bridge {
-    margin-top: -67px;
-    margin-bottom: 24px;
-}
-a.pink-button {
-    background: $pink;
-    color: white;
-    font-family: $headfont;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 13px 33px;
-    margin-bottom: 24px;
-    width: 100%;
-    &:hover {
-        cursor: pointer;
-        background: $green;
-    }
-    @media only screen and (min-width: $tablet) {
-        width: auto;
     }
 }
 .unwidow {

@@ -5,11 +5,18 @@
     {% include header.html %}
     <main  role="main" class="{{page.hero-classes}}">
         {% include hero.html %}
-      <article>
+      <article class="page-content">
+        {%- if page.authors -%}
         <h3 class="headline-left mini">
           Blog
           <span></span>
         </h3>
+        {%- elsif page.register-text -%}
+        <h3 class="headline-left mini">
+          Event
+          <span></span>
+        </h3>
+        {% endif %}
         <h1 class="title-post">{{page.title}}</h1>
         {%- if page.authors -%}
           {%- assign author_array = "" | split: ", " -%}
@@ -21,17 +28,33 @@
           {%- endif -%}
           {%- endfor -%}
           {%- endfor -%}
-          <h3 class="author-post copyfont">{{author_array | array_to_sentence_string: "and"}} | {{page.date | date: "%B %d, %Y"}}</h3>
+          <h3 class="meta-post copyfont">{{author_array | array_to_sentence_string: "and"}} | {{page.date | date: "%B %d, %Y"}}</h3>
+        {%- elsif page.event-date -%}
+        <h3 class="meta-post copyfont">{{page.event-date | date: "%B %d, %Y"}}</h3>
         {%- endif -%}
         <div class="inner">
           {{content}}
         </div>
         {%- if page.register-text -%}
-        <button onclick="location.href='{{page.register-link}}" type="button">{{page.register-text}}</button>
+        <button class="pink-button event-button" onclick="location.href='{{page.register-link}}'" type="button">{{page.register-text}}</button>
         {%- endif -%}
       </article>
-      
+      {%- if page.authors -%}
+      {%- include modules/explore-more.html -%}
+      {%- endif -%}
     </main>
   </body>
   {% include footer.html %}
+  <script>
+    jQuery(function($){
+      $(function(){
+        $(".archive-item .post-excerpt").each(function() {
+          if ($(this).text().length > 200) {
+            $(this).text($(this).text().substring(0,224)).append("...");
+          }
+        });
+      })
+    })
+
+  </script>
 </html>

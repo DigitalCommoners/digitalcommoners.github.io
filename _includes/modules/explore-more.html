@@ -1,0 +1,26 @@
+<aside id="explore-more">
+    <div class="inner">
+        <h2 class="explore-more-title">Explore more</h2>
+        {%- assign explore_more = "" | split: ", " -%}
+        {%- assign sorted = site.posts | sort-by: 'date' | reverse -%}
+        {%- for post in sorted -%}
+            {%- unless post.title == page.title -%}
+            {%- assign explore_more = explore_more | push: post -%}
+            {%- endunless -%}
+        {%- endfor -%}
+        {%- for card in explore_more limit: 3 -%}
+        {%- assign author_array = "" | split: ", " -%}
+            {%- for post-author in card.authors -%}
+                {%- for site-author in site.data.people.authors -%}
+                    {%- if site-author.id == post-author -%}
+                    {%- capture author -%}{{site-author.name}}{%- endcapture -%}
+                    {%- assign author_array = author_array | push: author -%}
+                    {%- endif -%}
+                {%- endfor -%}
+            {%- endfor -%}
+            {%- assign authors = author_array | array_to_sentence_string: "and" -%}
+            {%- assign postdate = card.date | date: "%B %d, %Y" -%}
+            {%- include components/archive-card.html type="blog-post" image=card.image title=card.title authors=authors date=postdate  excerpt=card.excerpt url=card.url -%}
+        {%- endfor -%}
+    </div>
+</aside>

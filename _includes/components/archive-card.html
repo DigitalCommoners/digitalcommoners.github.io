@@ -1,0 +1,16 @@
+<article class="archive-item{% if include.type == 'blog-post' %} blog-item{% elsif include.type == 'event-post' %} event-item{% endif %}{% if include.classes %} {{include.classes}}{% endif %}" itemscope {%-if include.type == 'blog-post'-%}itemtype="https://schema.org/BlogPosting"{%-elsif include.type == 'event-post' -%}itemtype="https://schema.org/Event"{%-endif-%}>
+    <div class="featured-image" style="background-image:url('{{include.image}}');" itemprop="image"></div>
+    <div class="text-block-card" itemprop="about">
+        {%-if include.type == 'blog-post' -%}
+        <h3 class="headline-left mini">Blog<span></span></h3>
+        {%-endif-%}
+        <h2 class="title-post title-card">{{include.title}}</h2>
+        {%-if include.type == 'blog-post' -%}
+        <h3 class="meta-post">{{include.authors}} | {{include.date}}</h3>
+        {%-elsif include.type == 'event-post'-%}
+        <h3 class="meta-post copyfont">{{include.date}}</h3>
+        {%-endif-%}
+        <p class="post-excerpt">{{include.excerpt | strip_html }}</p>
+    </div>
+    <button class="pink-button" onclick="location.href='{{include.url}}'" type="button">Read more</button>
+</article>

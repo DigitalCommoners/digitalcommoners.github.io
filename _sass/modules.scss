@@ -90,15 +90,16 @@ nav#header-nav {
                     font-size: 16px;
                     font-weight: 700;
                     text-transform: uppercase;
-                    padding: 12px 13px;
+                    padding: 0px;
                     margin: 0 0 0 auto;
                     transition: .2s all ease-in-out;
                     a {
+                        display: block;
                         color: $black;
                         font-size: 16px;
                         font-weight: 700;
                         text-transform: uppercase;
-                        padding: 0px;
+                        padding: 12px 13px;
                         margin: 0px;
                     }
                     &:hover {
@@ -202,6 +203,113 @@ footer#site-footer {
         }
     }
 }
+/*       HOMEPAGE HERO       */
+section#homepage-hero {
+    div.inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1920px;
+        .color-block-container.hero-image-block {
+            margin-bottom: 0px;
+            img {
+                width: 96%;
+            }
+        }
+        .color-block-container.hero-text-block {
+            margin: -54px 0px auto auto;
+            width: 87%;
+            .hero-title-bkgd {
+                position: relative;
+                background: $green;
+                color: $white;
+                font-size: 20px;
+                font-weight: 400;
+                padding: 33px 36px;
+                margin: 0px 0px auto auto;
+                width: 94.6%;
+                z-index: 1;
+            }
+        }
+        .triangle {
+            position: relative;
+            margin: -80px 0px 0px auto;
+            mix-blend-mode: multiply;
+            z-index: 1000;
+        }
+        .lower-text-block {
+            font-size: 18px;
+            padding: 33px 36px 33px 0px;
+            margin: 0px auto 0 13%;
+            width: 87%;
+        }
+        .yellow-line {
+            display: block;
+            background: $yellow;
+            margin: 0px 0px 0px auto;
+            height: 10px;
+            width: 87%;
+        }
+    }
+    @media only screen and (min-width: $tablet) {
+        margin-bottom: 240px;
+        div.inner {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            .color-block-container.hero-image-block {
+                flex-basis: 61%;
+                margin: 0px auto auto 0px;
+                img {
+                    margin: 0px -5% 0px 5%;
+                    width: 100%;
+                }
+                .color-block {
+                    width: 33.8%;
+                }
+            }
+            .color-block-container.hero-text-block {
+                flex-basis: 44%;
+                margin: 5% auto 0px -14%;
+                .hero-title-bkgd {
+                    @include flexfont(20px,48px,$tablet,$desktop);
+                    padding: 12% 10%;
+                    margin: 0px;
+                    width: 100%;
+                }
+            }
+            .triangle {
+                flex-basis: 100%;
+                margin: -13.5% 0px 120px 81.9%;
+                max-width: 18.1%;
+            }
+            .lower-text-block {
+                flex-basis: 100%;
+                @include flexfont(20px,48px,$tablet,$desktop);
+                padding: 0px;
+                margin: 0px 22.5% 120px auto;
+                max-width: 55.5%;
+            }
+            .yellow-line {
+                flex-basis: 100%;
+                height: 30px;
+                max-width: 78.1%;
+            }
+        }
+    }
+    @media only screen and (min-width: $desktop) {
+        div.inner {
+            .color-block-container.hero-text-block {
+                .hero-title-bkgd {
+                    font-size: 48px;
+                }
+            }
+        }
+    }
+}
 /*       HERO       */
 section#hero {
     &.seven00 {
@@ -210,6 +318,43 @@ section#hero {
         width: 100%;
         @media only screen and (min-width: $tablet) {
             height: 700px;
+        }
+    }
+    div.inner {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1664px;
+        .color-block-container {
+            margin: 60px 0px auto auto;
+            width: auto;
+            .hero-title-bkgd {
+                position: relative;
+                background: $green;
+                color: $white;
+                font-size: 30px;
+                font-weight: 700;
+                padding: 15px 70px 15px 30px;
+                margin: 0px 0px auto auto;
+                width: 94.6%;
+                z-index: 1;
+            }
+            .color-block {
+                bottom: -14%;
+                width: 94.6%;
+            }
+        }
+    }
+    @media only screen and (min-width: $tablet) {
+        div.inner {
+            .color-block-container {
+                margin: 304px 0px auto auto;
+                .hero-title-bkgd {
+                    font-size: 128px;
+                    padding: 62px 242px 72px 123px;
+                }
+            }
         }
     }
 }
@@ -299,6 +444,78 @@ section#header {
         }
     }
 }
+/*      EVENTS      */ 
+section#events {
+    padding: 80px 0px;
+    div.inner {
+        position: relative;
+        .js-flickity {
+            position: relative;
+            padding-bottom: 40px;
+            z-index: 100;
+            &::after {
+                content:'flickity';
+                display: none;
+            }
+            .flickity-viewport {
+            }
+            .archive-item {
+                margin-top: 30px;
+                filter:drop-shadow(0px 4px 12px rgba(153, 153, 153, 0.4));
+                .text-block-card {
+                    height: 280px;
+                }
+            }
+            .flickity-page-dots .dot {
+                padding-left: 10px;
+            }
+        }
+        .color-block {
+            position: absolute;
+            left: 66%;
+            bottom: 40px;
+            display: block;
+            background: $yellow;
+            height: 50px;
+            width: 150px;
+            z-index: 10;
+        }
+    }
+    @media only screen and (min-width: $tablet) {
+        div.inner {
+            margin: 0 auto;
+            max-width: 1664px;
+            .js-flickity {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 0 40px;
+                .archive-item {
+                    flex-basis: 30%;
+                    margin: 0px 1%;
+                    .text-block-card {
+                        padding: 0px 12%;
+                        height: 400px;
+                        p { 
+                            @include flexfont(13px,16px,$tablet,$desktop); 
+                        }
+                    }
+                }
+                &::after {
+                    content:'';
+                }
+            }
+            .color-block {
+                left: unset;
+                right: 10px;
+                bottom: -50px;
+                height: 250px;
+                width: 230px;
+            }
+        }
+    }
+}
+
 /*     CONTACT      */ 
 section#contact {
     position: relative;
@@ -327,6 +544,40 @@ section#contact {
                 margin-right: 5%;
                 width: 56%;
             }
+        }
+    }
+}
+/*   EXPLORE MORE   */
+aside#explore-more {
+    padding: 0px 0px 30px;
+    div.inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 0 24px;
+        margin: 0 auto;
+        max-width: 1698px;
+        .explore-more-title {
+            flex-basis: 100%;
+            color: $green;
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+    }
+    @media only screen and (min-width: $tablet) {
+        padding: 0px 0px 0px;
+        div.inner {
+            .explore-more-title {
+                @include flexfont(60px,86px,$tablet,$desktop);
+                margin: 0 auto 120px 15px;
+            }
+        }
+    }
+    @media only screen and (min-width: $desktop) {
+        div.inner {
+            .explore-more-title { font-size: 86px; }
         }
     }
 }

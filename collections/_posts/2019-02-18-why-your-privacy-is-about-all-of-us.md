@@ -5,7 +5,7 @@ title: >-
 date: 2019-02-18 14:33:22 +0100
 description: >-
   
-image: /assets/images/featured/why-privacy-featured.jpg
+image: /assets/images/featured/why-privacy-featured.png
 hero-image: /assets/images/hero/why-privacy.jpg
 hero-classes: seven00
 authors:
