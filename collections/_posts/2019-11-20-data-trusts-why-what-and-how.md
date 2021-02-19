@@ -5,7 +5,7 @@ title: >-
 date: 2019-11-20 14:33:22 +0100
 description: >-
   
-image: /assets/images/featured/data-trusts-featured.png
+image: /assets/images/hero/data-trusts.jpg
 hero-image: /assets/images/hero/data-trusts.jpg
 hero-classes: seven00
 authors:

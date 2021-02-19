@@ -6,7 +6,7 @@ date: 2019-06-24 14:33:22 +0100
 description: >-
   
 image: /assets/images/featured/consent-champion-featured.png
-hero-image: /assets/images/hero/consent-champion.jpg
+hero-image: /assets/images/featured/consent-champion-featured.png
 hero-classes: seven00
 authors:
   - anouk-ruhaak
