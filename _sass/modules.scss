@@ -20,7 +20,7 @@
         width: 148px;
     }
     &.persist {
-        height: 80px;
+        height: 90px;
         transition: .2s all ease-in-out;
     }
 }
@@ -36,6 +36,9 @@
             margin: 0px;
             height: 60px;
             width: 269px;
+        }
+        &.persist {
+            height: 108px;
         }
     }
 }
