@@ -316,7 +316,7 @@ section#hero {
         height: 158px;
         width: 100%;
         @media only screen and (min-width: $tablet) {
-            height: 700px;
+            height: 450px;
         }
     }
     div.inner {
@@ -348,7 +348,7 @@ section#hero {
     @media only screen and (min-width: $tablet) {
         div.inner {
             .color-block-container {
-                margin: 304px 0px auto auto;
+                margin: 100px 0px auto auto;
                 .hero-title-bkgd {
                     font-size: 80px;
                     padding: 62px 242px 72px 123px;
