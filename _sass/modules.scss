@@ -21,7 +21,6 @@
     }
     &.persist {
         height: 80px;
-        box-shadow: 0px 0px 2px $pink;
         transition: .2s all ease-in-out;
     }
 }
@@ -272,11 +271,11 @@ section#homepage-hero {
                 }
             }
             .color-block-container.hero-text-block {
-                flex-basis: 44%;
-                margin: 5% auto 0px -14%;
+                flex-basis: 36%;
+                margin: 5% auto 0px -20%;
                 .hero-title-bkgd {
-                    @include flexfont(20px,48px,$tablet,$desktop);
-                    padding: 12% 10%;
+                    @include flexfont(20px,30px,$tablet,$desktop);
+                    padding: 12% 12%;
                     margin: 0px;
                     width: 100%;
                 }
@@ -288,10 +287,10 @@ section#homepage-hero {
             }
             .lower-text-block {
                 flex-basis: 100%;
-                @include flexfont(20px,48px,$tablet,$desktop);
+                @include flexfont(20px,30px,$tablet,$desktop);
                 padding: 0px;
-                margin: 0px 22.5% 120px auto;
-                max-width: 55.5%;
+                margin: 0px 32.5% 120px auto;
+                max-width: 45.5%;
             }
             .yellow-line {
                 flex-basis: 100%;
@@ -351,7 +350,7 @@ section#hero {
             .color-block-container {
                 margin: 304px 0px auto auto;
                 .hero-title-bkgd {
-                    font-size: 128px;
+                    font-size: 80px;
                     padding: 62px 242px 72px 123px;
                 }
             }
@@ -395,7 +394,7 @@ section#about {
                 margin: 0px 0px 0px auto;
                 max-width: 520px;
                 p {
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }
         }
@@ -438,7 +437,7 @@ section#header {
                 margin: 0px auto 0px 0px;
                 max-width: 520px;
                 p {
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }
         }
@@ -485,9 +484,13 @@ section#events {
         div.inner {
             margin: 0 auto;
             max-width: 1664px;
+            .headline-text {
+                padding: 0px;
+                margin: 0 auto;
+            }
             .js-flickity {
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: flex-start;
                 padding: 0 40px;
                 .archive-item {

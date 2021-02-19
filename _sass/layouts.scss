@@ -6,16 +6,20 @@ body.post {
             h1 {
                 color: $pink;
                 font-size: 28px;
+                margin: 0 auto;
                 margin-bottom: 20px;
+                max-width: 660px;
             }
             h3 {
                 color: $green;
                 font-size: 14px;
                 font-weight: 400;
+                margin: 0 auto;
                 margin-bottom: 24px;
+                max-width: 660px;
             }
             div.inner {
-                margin: 0px auto 0px 0px;
+                margin: 0 auto;
                 max-width: 660px;
             }
         }
