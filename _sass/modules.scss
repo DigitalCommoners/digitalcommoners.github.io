@@ -143,6 +143,13 @@ footer#site-footer {
         flex-direction: column;
         padding: 36px;
         max-width: 1664px;
+         a {
+            color: $white;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: $pink;
+        }
         .social-nav {
             flex: 1 0 auto;
             display: flex;
