@@ -19,13 +19,13 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Digital Commoners
-email: your-email@example.com
+email: info@digitalcommoners.org
 description: >- # this means to ignore newlines until "baseurl:"
   Digital Commoners aims to bring together practioners, technologists, legal professionals and academics working on this problem, as well as the many communities seeking to gain control over digital resources (including data).
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.digitalcommoners.org/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: 
+github_username:  
 future: true
 
 # Build settings
