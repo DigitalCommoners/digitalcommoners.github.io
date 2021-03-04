@@ -22,6 +22,8 @@ categories:
 
 ![xkcd.com/2432](/assets/images/featured/xkcd-consent.jpeg)
 
+*source: xkcd.com/2432*
+
 One of the underlying problems, Nissenbaum observes, is that consent is not meaningful when we cannot trust the system in place to protect our rights. We can, for example, meaningfully consent to have a surgeon operate on our kidneys; not because we have a perfect understanding of what such an operation might entail, but because we trust the medical system works and protects us. The only decisions left for us are not the specific way we want to surgeon to cut our kidney, but whether we have any problems with blood transfusions or resuscitation. Decisions that depend on our norms and beliefs; things we understand.
 
 “Choosing is not mere picking but requires that the subject understands that to which he or she is consenting”. Especially when considering raw data, like the number of keystrokes, or seconds spend staring at a screen, context is missing. The data lacks sufficient meaning to allow us to understand possible privacy implications of sharing such data. Only once we think through specific use cases and combinations of data do we start to understand how sharing it could help or hinder us. Such an analysis, however, requires extensive time and domain knowledge.
