@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WG governance design
-date: 2021-04-01 14:33:22 +0100
+date: 2021-05-01 14:33:22 +0100
 description: >-
   
 image: /assets/images/featured/working-group.jpg
