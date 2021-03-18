@@ -7,8 +7,8 @@ description: >-
 image: /assets/images/featured/working-group.jpg
 hero-image: /assets/images/featured/working-group.jpg
 hero-classes: seven00
-register-text: Register your interest
-register-link: https://twitter.com
+register-text: Email to find out more!
+register-link: mailto:info@digitalcommoners.org
 categories:
 ---
 
