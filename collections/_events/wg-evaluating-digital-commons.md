@@ -7,8 +7,8 @@ description: >-
 image: /assets/images/featured/evaluation.jpg
 hero-image: /assets/images/featured/evaluation.jpg
 hero-classes: seven00
-register-text: Register your interest
-register-link: 
+register-text: Email to register!
+register-link: mailto:hello@anoukruhaak.com?subject=WG Digital Commons
 categories:
 ---
 
